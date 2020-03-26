@@ -31,8 +31,8 @@ class Des
     left_key_block = permutation_choice_one[0..27]
     right_key_block = permutation_choice_one[28..55]
 
-    left_key_block = shifts.left_shift(1, left_key_block)
-    right_key_block = shifts.left_shift(1, right_key_block)
+    left_key_block = shifts.left_shift(round_number, left_key_block)
+    right_key_block = shifts.left_shift(round_number, right_key_block)
 
     permutations.permutation_choice_two(left_key_block.push(*right_key_block))
   end
